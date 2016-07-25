@@ -41,12 +41,12 @@ public class BebopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bebop);
 
         initIHM();
-
+/*
         Intent intent = getIntent();
         ARDiscoveryDeviceService service = intent.getParcelableExtra(DeviceListActivity.EXTRA_DEVICE_SERVICE);
         mBebopDrone = new BebopDrone(this, service);
         mBebopDrone.addListener(mBebopListener);
-
+/*/
     }
 
     @Override

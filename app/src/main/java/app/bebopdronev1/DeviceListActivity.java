@@ -56,33 +56,9 @@ public class DeviceListActivity extends AppCompatActivity {
                 ARDiscoveryDeviceService service = (ARDiscoveryDeviceService)mAdapter.getItem(position);
                 ARDISCOVERY_PRODUCT_ENUM product = ARDiscoveryService.getProductFromProductID(service.getProductID());
                 switch (product) {
-                    case ARDISCOVERY_PRODUCT_ARDRONE:
                     case ARDISCOVERY_PRODUCT_BEBOP_2:
                         intent = new Intent(DeviceListActivity.this, BebopActivity.class);
                         break;
-
-                    case ARDISCOVERY_PRODUCT_SKYCONTROLLER:
-
-                        //intent = new Intent(DeviceListActivity.this, SkyControllerActivity.class);
-                        Toast.makeText(getApplicationContext(),"Sky Controller Activity Laungh not implemented",Toast.LENGTH_LONG).show();
-                        break;
-
-                    case ARDISCOVERY_PRODUCT_JS:
-                    case ARDISCOVERY_PRODUCT_JS_EVO_LIGHT:
-                    case ARDISCOVERY_PRODUCT_JS_EVO_RACE:
-
-                        Toast.makeText(getApplicationContext(),"JS Activity Laungh not implemented",Toast.LENGTH_LONG).show();
-                        //intent = new Intent(DeviceListActivity.this, JSActivity.class);
-                        break;
-
-                    case ARDISCOVERY_PRODUCT_MINIDRONE:
-                    case ARDISCOVERY_PRODUCT_MINIDRONE_EVO_BRICK:
-                    case ARDISCOVERY_PRODUCT_MINIDRONE_EVO_LIGHT:
-
-                        Toast.makeText(getApplicationContext(),"Mini drone Activity Laungh not implemented",Toast.LENGTH_LONG).show();
-                        //intent = new Intent(DeviceListActivity.this, MiniDroneActivity.class);
-                        break;
-
                     default:
                         Log.e(TAG, "The type " + product + " is not supported by this sample");
                 }
